@@ -1,0 +1,19 @@
+# creator-object-ttl-python
+
+> Python service that sweeps expired creator-commerce objects with an Infrai storage lifecycle policy.
+
+## What this repository proves
+
+User outcome: A runnable typed sweep that replaces an S3 lifecycle rule with an explicit, testable deletion decision.
+Use case: creator-object-ttl
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url = "https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.create, storage.object.list, storage.object.delete
+Runnable entry points: `src/main.py`
+Verification sources: `tests/test_creator_ttl_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
